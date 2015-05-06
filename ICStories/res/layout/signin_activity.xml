@@ -1,0 +1,226 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <RelativeLayout
+        android:id="@+id/rlLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent" >
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:text="LOGIN"
+        android:textColor="#00b0f0"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLogin"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:text="________________________________________________"
+        android:textColor="#c2c2c2"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rlLoginfb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/tvLoginfb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="helveticaNeueLTCom LtCn"
+            android:text="Login with Facebook"
+            android:textColor="#fff"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/ivFb"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tvLoginfb"
+            android:background="@drawable/fb" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/rlLoginfb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#c5c5c5"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:hint="User Name"
+        android:inputType="textFilter"
+        android:textColorHint="#7a7f83"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/etUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="#c5c5c5"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="#7a7f83"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/buttonSignin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rlPassword"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/blue_button_pressed"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:text="LOGIN"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rlSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSignin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent" >
+
+        <TextView
+            android:id="@+id/tvDontHave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="helveticaNeueLTCom LtCn"
+            android:text="Don&apos;t have an account?"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/tvDontHave"
+            android:fontFamily="helveticaNeueLTCom LtCn"
+            android:text="Sign Up."
+            android:textColor="#00b0f0"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvDontHave"
+            android:layout_marginTop="5dp"
+            android:fontFamily="helveticaNeueLTCom LtCn"
+            android:text="Forgot Password?"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp" >
+
+        <TextView
+            android:id="@+id/tvTermsOfUse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="helveticaNeueLTCom LtCn"
+            android:text="Terms of Use"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tvPrivacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/tvTermsOfUse"
+            android:fontFamily="helveticaNeueLTCom LtCn"
+            android:text="Privacy Policy"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTerms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/gradient_bg"
+        android:visibility="gone" >
+
+        <WebView
+            android:id="@+id/wvTerms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/ivCloseTerms"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#fff"
+            android:scaleType="fitXY"
+            android:src="@drawable/close" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eeshana.icstories"
+    android:versionCode="5"
+    android:versionName="2.3" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+   	<uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    
+    
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="com.eeshana.icstories.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.eeshana.icstories.permission.C2D_MESSAGE" />
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:name=".SampleApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.eeshana.icstories.activities.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.eeshana.icstories.activities.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.eeshana.icstories.activities.RegistrationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.eeshana.icstories.activities.SignInActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.eeshana.icstories.activities.CaptureVideoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.eeshana.icstories.activities.UploadVideoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.eeshana.icstories.activities.WallActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.eeshana.icstories.activities.SettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.eeshana.icstories" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GCMIntentService" />
+        <service
+            android:name="com.netcompss.ffmpeg4android.FFMpegRemoteServiceBridge"
+            android:exported="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.netcompss.ffmpeg4android.FFMpegRemoteServiceBridge" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="ff366aaed61bdc6b2f6160b2de214b191e17078d" />
+        <activity android:name=".activities.CameraActivity"
+            android:screenOrientation="landscape"
+            ></activity>
+        <activity android:name=".activities.VideoPlayer"></activity>
+    </application>
+
+</manifest>

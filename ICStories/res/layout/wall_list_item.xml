@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_vertical_margin" >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:text="Title"
+        android:textColor="#00b0f0"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTitleTranslated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:text="Title 2"
+        android:textColor="#00b0f0"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitleTranslated"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:text="________________________________________________"
+        android:textColor="#c2c2c2"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rlVideo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tvLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:id="@+id/ivVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerInside" />
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/play"
+            android:padding="5dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rlVideo"
+        android:layout_marginTop="5dp"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:text="MM/DD/YYYY"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvDate"
+        android:layout_marginTop="5dp"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:text="California"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLocation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="helveticaNeueLTCom LtCn"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rlVideo"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/trash" />
+
+</RelativeLayout>

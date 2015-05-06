@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_vertical_margin" >
+
+            <RelativeLayout
+                android:id="@+id/rlLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent" >
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/logo"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlLogo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:text="UPLOAD"
+                android:textColor="#00b0f0"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUpload"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:text="________________________________________________"
+                android:textColor="#c2c2c2"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+
+            <com.eeshana.icstories.common.ActionEditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/tvLine"
+                android:layout_marginTop="10dp"
+                android:background="#c5c5c5"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:gravity="left|center_vertical"
+                android:hint="Title"
+                android:imeActionLabel="Next"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:textColorHint="#7a7f83"
+                android:textSize="15sp" />
+
+            <com.eeshana.icstories.common.ActionEditText
+                android:id="@+id/etDescripton"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/etTitle"
+                android:layout_marginTop="15dp"
+                android:background="#c5c5c5"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:gravity="left"
+                android:hint="Description"
+                android:imeActionLabel="Next"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:textColorHint="#7a7f83"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/etDescripton"
+                android:layout_marginTop="10dp"
+                android:background="#c5c5c5"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:gravity="left|center_vertical"
+                android:hint="Location"
+                android:imeActionLabel="Done"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:textColorHint="#7a7f83"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlDailyAssignment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/etLocation"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tvDailyAssignment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="helveticaNeueLTCom LtCn"
+                    android:gravity="center_horizontal"
+                    android:text="Daily Assignment?  Y/N"
+                    android:textColor="#fff"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/buttonCheck"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="#c5c5c5"
+                    android:gravity="center"
+                    android:text="NO"
+                    android:textColor="#7a7f83"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlUpload"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/rlDailyAssignment"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="8dp" >
+
+                <Button
+                    android:id="@+id/buttonUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_button_pressed"
+                    android:fontFamily="helveticaNeueLTCom LtCn"
+                    android:text="UPLOAD"
+                    android:textColor="#fff"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/upload" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/llBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:id="@+id/rlHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/nonpress_border" >
+
+            <TextView
+                android:id="@+id/tvHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:text="HOME"
+                android:textColor="#fffffe"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlWall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rlHome"
+            android:background="@drawable/nonpress_border" >
+
+            <TextView
+                android:id="@+id/tvWall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:text="WALL"
+                android:textColor="#fffffe"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rlWall"
+            android:background="@drawable/nonpress_border" >
+
+            <TextView
+                android:id="@+id/tvSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:text="SETTINGS"
+                android:textColor="#fffffe"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_vertical_margin" >
+
+            <RelativeLayout
+                android:id="@+id/rlLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent" >
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/logo"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAssignment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlLogo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="#c5c5c5"
+                android:paddingBottom="10dp" >
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="helveticaNeueLTCom LtCn"
+                    android:text="DAILY ASSIGNMENT:"
+                    android:textColor="#00b0f0"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:text="____________________________"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvLine"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="helveticaNeueLTCom LtCn"
+                    android:text="MM/DD/YYYY"
+                    android:textColor="#fff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rlAssignWithImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tvDate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlImageAndAssign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" >
+
+                        <ImageView
+                            android:id="@+id/ivAssignment"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="#333"
+                            android:cropToPadding="true"
+                            android:padding="1dp"
+                            android:scaleType="fitXY" 
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tvAssignment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tvAssignmentTranslated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:layout_below="@id/tvAssignment"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlImageAndAssign"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="helveticaNeueLTCom LtCn"
+                        android:gravity="center"
+                        android:textColor="#0000FF"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAssignWithLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tvOnlyAssignment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                    
+                    <TextView
+                        android:id="@+id/tvOnlyAssignmentTranslated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/tvOnlyAssignment"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvLink2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvOnlyAssignmentTranslated"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="helveticaNeueLTCom LtCn"
+                        android:gravity="center"
+                        android:textColor="#0000FF"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlAssignment"
+                android:layout_marginTop="30dp" >
+
+                <Button
+                    android:id="@+id/buttonRecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/red_bg_pressed"
+                    android:fontFamily="helveticaNeueLTCom LtCn"
+                    android:text="RECORD"
+                    android:textColor="#fff"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/record" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonSelectVideo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rlRecord"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gray_bg_pressed"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:text="SELECT VIDEO:"
+                android:textColor="#999"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonSelectVideo"
+                android:layout_marginTop="8dp" >
+
+                <Button
+                    android:id="@+id/buttonUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_button_pressed"
+                    android:fontFamily="helveticaNeueLTCom LtCn"
+                    android:text="UPLOAD"
+                    android:textColor="#fff"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/upload" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvVideoDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlUpload"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_toast"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/llBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:id="@+id/rlHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/nonpress_border" >
+
+            <TextView
+                android:id="@+id/tvHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:text="HOME"
+                android:textColor="#fffffe"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlWall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rlHome"
+            android:background="@drawable/nonpress_border" >
+
+            <TextView
+                android:id="@+id/tvWall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:text="WALL"
+                android:textColor="#fffffe"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rlWall"
+            android:background="@drawable/nonpress_border" >
+
+            <TextView
+                android:id="@+id/tvSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="helveticaNeueLTCom LtCn"
+                android:text="SETTINGS"
+                android:textColor="#fffffe"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlZoomedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/ivZoomedImage"
+            android:scaleType="fitXY"
+            android:src="@drawable/close" />
+
+        <ImageView
+            android:id="@+id/ivZoomedImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivClose"
+            android:scaleType="fitXY"
+            android:src="@drawable/empty" />
+    </RelativeLayout>
+
+</RelativeLayout>
